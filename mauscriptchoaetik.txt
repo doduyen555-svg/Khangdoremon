@@ -39,7 +39,7 @@ CloseButton.MouseButton1Click:Connect(function()
 	ScreenGui:Destroy() -- ấn X sẽ tắt giao diện
 end)
 TextBox.Parent = Frame
-TextBox.PlaceholderText = "Khangscrvn"
+TextBox.PlaceholderText = "Keys"
 TextBox.Text = ""
 TextBox.Size = UDim2.new(0.9, 0, 0, 35)
 TextBox.Position = UDim2.new(0.05, 0, 0.25, 0)
@@ -59,7 +59,7 @@ GetKeyButton.Text = "getkey 🔑"
 GetKeyButton.Size = UDim2.new(0.4, 0, 0, 30)
 GetKeyButton.Position = UDim2.new(0.55, 0, 0.65, 0)
 GetKeyButton.BackgroundColor3 = Color3.fromRGB(100, 100, 255)
-UICorner:Clone().Parent = GetKeyButton
+UICorner:Clone().Parent =key system GetKeyButton
 
 GetKeyButton.MouseButton1Click:Connect(function()
 	setclipboard(keyLink)
