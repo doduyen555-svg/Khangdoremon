@@ -195,7 +195,7 @@ Tabs.Main4:AddButton({
 loadstring(game:HttpGet("https://raw.githubusercontent.com/TurboLite/Script/main/FixLag.lua"))() -- 👈 link script tải
 	end
 })
-Tabs.Main1:AddButton({
+Tabs.Main4:AddButton({
 	Title = "fixlagv1",                             -- 👈 tên nút hiển thị
 	Description = "script này đc á",-- 👈 mô tả
 	Callback = function()
@@ -206,7 +206,7 @@ Tabs.Main1:AddButton({
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/duchao28052025-collab/Fixlag/refs/heads/main/Fixlag-V1"))() -- 👈 link script tải
 	end
 })
-Tabs.Main1:AddButton({
+Tabs.Main4:AddButton({
 	Title = "fixlagv3",                             -- 👈 tên nút hiển thị
 	Description = "script này đc á",-- 👈 mô tả
 	Callback = function()
