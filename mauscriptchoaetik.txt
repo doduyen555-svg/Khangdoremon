@@ -45,8 +45,8 @@ local Window = Fluent:CreateWindow({
 local Tabs = {
 	Main1 = Window:AddTab({ Title = "grow a gaden 🌱🌴" }),  -- 👈 đổi tên tab 2
 	Main2 = Window:AddTab({ Title = "raise animal" }),     -- 👈 đổi tên tab 3
-	Main3 = Window:AddTab({ Title = "99 đêm🥷" }),        -- 👈 đổi tên tab 4
-}
+	Main3 = Window:AddTab({ Title = "99 đêm🥷" }),      -- 👈 đổi tên tab 4
+	Main4 = Window:AddTab({ Title = "fix lag⚙️" }),  -- 👈 đổi tên tab 5
 
 ------------------------------------------------
 -- TAB 2: Ví dụ thêm script
@@ -183,3 +183,38 @@ Tabs.Main3:AddButton({
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))() -- 👈 link script tải
 	end
 })
+Tabs.Main4:AddButton({
+	Title = "turbo",                             -- 👈 tên nút hiển thị
+	Description = "script này của khang",-- 👈 mô tả
+	Callback = function()
+		local Settings = {
+			JoinTeam = "Pirates";   -- 👈 team mặc định: Pirates hoặc Marines
+			Translator = true;      -- 👈 bật dịch sang tiếng Việt nếu có
+		}
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/TurboLite/Script/main/FixLag.lua"))()  -- 👈 link script tải
+	end
+})
+Tabs.Main4:AddButton({
+	Title = "fixlagv3",                             -- 👈 tên nút hiển thị
+	Description = "",-- 👈 mô tả
+	Callback = function()
+		local Settings = {
+			JoinTeam = "Pirates";   -- 👈 team mặc định: Pirates hoặc Marines
+			Translator = true;      -- 👈 bật dịch sang tiếng Việt nếu có
+		}
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Graihub/graihubfixlagv3/refs/heads/main/fixlagv3"))()  -- 👈 link script tải
+	end
+})
+Tabs.Main4:AddButton({
+	Title = "fixlagv1",                             -- 👈 tên nút hiển thị
+	Description = "cx đc á",-- 👈 mô tả
+	Callback = function()
+		local Settings = {
+			JoinTeam = "Pirates";   -- 👈 team mặc định: Pirates hoặc Marines
+			Translator = true;      -- 👈 bật dịch sang tiếng Việt nếu có
+		}
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/duchao28052025-collab/Fixlag/refs/heads/main/Fixlag-V1"))()  -- 👈 link script tải
+	end
+})
+		
+			 
