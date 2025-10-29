@@ -4,7 +4,7 @@ local CoreGui = game:GetService("StarterGui")
     CoreGui:SetCore("SendNotification", {
         Title = "khang doremon",
         Text = "Loading script",
-        Icon = "rbxthumb://type=Asset&id=95472747120306&w=150&h=150",
+        Icon = "rbxthumb://type=Asset&id=119525744204425",
         Duration = 6,
         Callback = AllowRunServiceBind,
     })
