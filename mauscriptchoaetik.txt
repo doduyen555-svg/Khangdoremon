@@ -46,7 +46,8 @@ local Tabs = {
 	Main1 = Window:AddTab({ Title = "grow a gaden 🌱🌴" }),  -- 👈 đổi tên tab 2
 	Main2 = Window:AddTab({ Title = "raise animal" }),     -- 👈 đổi tên tab 3
 	Main3 = Window:AddTab({ Title = "99 đêm🥷" }),      -- 👈 đổi tên tab 4
-    Main4 = Window:AddTab({ Title = "fix lag⚙️" }),  -- 👈 đổi tên tab 5
+	Main4 = Window:AddTab({ Title = "fixlag⚙️" }),  -- 👈 đổi tên tab 2
+} 
 
 ------------------------------------------------
 -- TAB 2: Ví dụ thêm script
@@ -59,20 +60,18 @@ Tabs.Main1:AddButton({
 			JoinTeam = "Pirates";   -- 👈 team mặc định: Pirates hoặc Marines
 			Translator = true;      -- 👈 bật dịch sang tiếng Việt nếu có
 		}
-	
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))() -- 👈 link script tải
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))() -- 👈 link script tải
 	end
 })
 Tabs.Main1:AddButton({
-	Title = "kennie",                             -- 👈 tên nút hiển thị
+	Title = "than hub",                             -- 👈 tên nút hiển thị
 	Description = "script này tự trải nghiệm nha",-- 👈 mô tả
 	Callback = function()
 		local Settings = {
 			JoinTeam = "Pirates";   -- 👈 team mặc định: Pirates hoặc Marines
 			Translator = true;      -- 👈 bật dịch sang tiếng Việt nếu có
 		}
-	
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/vanthang512/ThanHubX/refs/heads/main/thanhubv2%25X%25"))() -- 👈 link script tải
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/vanthang512/ThanHubX/refs/heads/main/thanhubv2%25X%25"))() -- 👈 link script tải
 	end
 })
 Tabs.Main2:AddButton({
@@ -83,8 +82,7 @@ Tabs.Main2:AddButton({
 			JoinTeam = "Pirates";   -- 👈 team mặc định: Pirates hoặc Marines
 			Translator = true;      -- 👈 bật dịch sang tiếng Việt nếu có
 		}
-	
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/stormskmonkey/JinkX/main/Loader.lua"))() -- 👈 link script tải
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/stormskmonkey/JinkX/main/Loader.lua"))() -- 👈 link script tải
 	end
 })
 Tabs.Main2:AddButton({
@@ -95,8 +93,7 @@ Tabs.Main2:AddButton({
 			JoinTeam = "Pirates";   -- 👈 team mặc định: Pirates hoặc Marines
 			Translator = true;      -- 👈 bật dịch sang tiếng Việt nếu có
 		}
-	
-	loadstring(game:HttpGet("https://bonkhub.online/loader.lua",true))() -- 👈 link script tải
+		loadstring(game:HttpGet("https://bonkhub.online/loader.lua",true))() -- 👈 link script tải
 	end
 })
 Tabs.Main2:AddButton({
@@ -107,8 +104,7 @@ Tabs.Main2:AddButton({
 			JoinTeam = "Pirates";   -- 👈 team mặc định: Pirates hoặc Marines
 			Translator = true;      -- 👈 bật dịch sang tiếng Việt nếu có
 		}
-	
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/dodohubx-rgb/dodohub/refs/heads/main/loader.luau"))() -- 👈 link script tải
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/dodohubx-rgb/dodohub/refs/heads/main/loader.luau"))() -- 👈 link script tải
 	end
 })
 Tabs.Main3:AddButton({
@@ -119,8 +115,7 @@ Tabs.Main3:AddButton({
 			JoinTeam = "Pirates";   -- 👈 team mặc định: Pirates hoặc Marines
 			Translator = true;      -- 👈 bật dịch sang tiếng Việt nếu có
 		}
-	
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/caomod2077/Script/refs/heads/main/FoxnameHub.lua"))() -- 👈 link script tải
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/caomod2077/Script/refs/heads/main/FoxnameHub.lua"))() -- 👈 link script tải
 	end
 })
 Tabs.Main3:AddButton({
@@ -131,8 +126,7 @@ Tabs.Main3:AddButton({
 			JoinTeam = "Pirates";   -- 👈 team mặc định: Pirates hoặc Marines
 			Translator = true;      -- 👈 bật dịch sang tiếng Việt nếu có
 		}
-	
-	loadstring(game:httpGet("https://rawthubusercontent.com/x2zu/loader/main/freeloader.Lua",true))() -- 👈 link script tải
+		loadstring(game:httpGet("https://rawthubusercontent.com/x2zu/loader/main/freeloader.Lua",true))() -- 👈 link script tải
 	end
 })
 Tabs.Main3:AddButton({
@@ -143,8 +137,7 @@ Tabs.Main3:AddButton({
 			JoinTeam = "Pirates";   -- 👈 team mặc định: Pirates hoặc Marines
 			Translator = true;      -- 👈 bật dịch sang tiếng Việt nếu có
 		}
-     
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/VW-Add/main/nightsintheforest.lua", true))() -- 👈 link script tải
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/VW-Add/main/nightsintheforest.lua", true))() -- 👈 link script tải
 	end
 })
 Tabs.Main3:AddButton({
@@ -155,8 +148,7 @@ Tabs.Main3:AddButton({
 			JoinTeam = "Pirates";   -- 👈 team mặc định: Pirates hoặc Marines
 			Translator = true;      -- 👈 bật dịch sang tiếng Việt nếu có
 		}
-	
-	loadstring(game:HttpGet("https://duyvel.testhubgetkey.site/renxhub"))() -- 👈 link script tải
+		loadstring(game:HttpGet("https://duyvel.testhubgetkey.site/renxhub"))() -- 👈 link script tải
 	end
 })
 Tabs.Main3:AddButton({
@@ -167,8 +159,7 @@ Tabs.Main3:AddButton({
 			JoinTeam = "Pirates";   -- 👈 team mặc định: Pirates hoặc Marines
 			Translator = true;      -- 👈 bật dịch sang tiếng Việt nếu có
 		}
-	
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/GEC0/gec/refs/heads/main/Gec.Loader", true))() -- 👈 link script tải
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/GEC0/gec/refs/heads/main/Gec.Loader", true))() -- 👈 link script tải
 	end
 })
 Tabs.Main3:AddButton({
@@ -179,8 +170,7 @@ Tabs.Main3:AddButton({
 			JoinTeam = "Pirates";   -- 👈 team mặc định: Pirates hoặc Marines
 			Translator = true;      -- 👈 bật dịch sang tiếng Việt nếu có
 		}
-	
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/Rx1m/CpsHub/refs/heads/main/Hub",true))() -- 👈 link script tải
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Rx1m/CpsHub/refs/heads/main/Hub",true))() -- 👈 link script tải
 	end
 })
 Tabs.Main3:AddButton({
@@ -191,32 +181,18 @@ Tabs.Main3:AddButton({
 			JoinTeam = "Pirates";   -- 👈 team mặc định: Pirates hoặc Marines
 			Translator = true;      -- 👈 bật dịch sang tiếng Việt nếu có
 		}
-	
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))() -- 👈 link script tải
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))() -- 👈 link script tải
 	end
 })
 Tabs.Main4:AddButton({
 	Title = "TurboLite",                             -- 👈 tên nút hiển thị
-	Description = "script này đc á",-- 👈 mô tả
+	Description = "script này có cả speed á",-- 👈 mô tả
 	Callback = function()
 		local Settings = {
 			JoinTeam = "Pirates";   -- 👈 team mặc định: Pirates hoặc Marines
 			Translator = true;      -- 👈 bật dịch sang tiếng Việt nếu có
 		}
-	
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/TurboLite/Script/main/FixLag.lua"))() -- 👈 link script tải
-	end
-})
-Tabs.Main1:AddButton({
-	Title = "fixlagv3",                             -- 👈 tên nút hiển thị
-	Description = "script này cx đc á",-- 👈 mô tả
-	Callback = function()
-		local Settings = {
-			JoinTeam = "Pirates";   -- 👈 team mặc định: Pirates hoặc Marines
-			Translator = true;      -- 👈 bật dịch sang tiếng Việt nếu có
-		}
-	
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/Graihub/graihubfixlagv3/refs/heads/main/fixlagv3"))() -- 👈 link script tải
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TurboLite/Script/main/FixLag.lua"))() -- 👈 link script tải
 	end
 })
 Tabs.Main1:AddButton({
@@ -227,7 +203,17 @@ Tabs.Main1:AddButton({
 			JoinTeam = "Pirates";   -- 👈 team mặc định: Pirates hoặc Marines
 			Translator = true;      -- 👈 bật dịch sang tiếng Việt nếu có
 		}
-	
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/duchao28052025-collab/Fixlag/refs/heads/main/Fixlag-V1"))() -- 👈 link script tải
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/duchao28052025-collab/Fixlag/refs/heads/main/Fixlag-V1"))() -- 👈 link script tải
 	end
 })
+Tabs.Main1:AddButton({
+	Title = "fixlagv3",                             -- 👈 tên nút hiển thị
+	Description = "script này đc á",-- 👈 mô tả
+	Callback = function()
+		local Settings = {
+			JoinTeam = "Pirates";   -- 👈 team mặc định: Pirates hoặc Marines
+			Translator = true;      -- 👈 bật dịch sang tiếng Việt nếu có
+		}
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Graihub/graihubfixlagv3/refs/heads/main/fixlagv3"))() -- 👈 link script tải
+	end
+})						
