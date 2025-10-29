@@ -9,7 +9,7 @@ loadstring(game:HttpGet(("https://raw.githubusercontent.com/daucobonhi/Ui-Redz-V
         KeySystem = true,
         Title = "bản premium nên có key nhé",
         Description = "",
-        KeyLink = "ib tiktok mình nha nè @khang2742_q",
+        KeyLink = "https://anotepad.com/notes/tkfncw5f",
         Keys = {"khangdepzai"},
         Notifi = {
         Notifications = true,
