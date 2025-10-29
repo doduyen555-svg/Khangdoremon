@@ -1,0 +1,291 @@
+--// This file was created by XHider discord.gg/r4zPyTndmA
+
+local l = (loadstring(game:HttpGet("https://raw.githubusercontent.com/daucobonhi/UiRedzV5/refs/heads/main/DemoUi.lua")))();
+local Y = game:GetService("Players");
+local d = game:GetService("UserInputService");
+local W = game:GetService("RunService");
+local q = game:GetService("TweenService");
+local s = Y.LocalPlayer;
+local i = s.Character or s.CharacterAdded:Wait();
+local b = i:WaitForChild("Humanoid");
+local Z = l:MakeWindow({ Title = "Anura Hub", SubTitle = "By Anura Gaming", SaveFolder = "AnuraCombo" });
+Z:AddMinimizeButton({ Button = { Image = "rbxassetid://119525744204425", BackgroundTransparency = 0 }, Corner = { CornerRadius = UDim.new(0, 6) } });
+local k = Z:MakeTab({ "Main" });
+k:AddSection("\240\159\165\181b\195\161c g\225\186\165u d\195\173 pi ti\195\170n");
+local r = false;
+local e;
+local j = nil;
+local M = {};
+local function J()
+	M = {};
+	for l, Y in ipairs(Y:GetPlayers()) do
+		if Y ~= s then
+			table.insert(M, Y.Name);
+		end;
+	end;
+end;
+J();
+k:AddDropdown({
+	Name = "Ch\225\187\141n pi ti\195\170n",
+	Default = false,
+	Options = M,
+	Callback = function(l)
+		j = Y:FindFirstChild(l);
+	end,
+});
+k:AddButton({ Name = "\240\159\148\132 L\195\160m m\225\187\155i danh s\195\161ch", Callback = function()
+		J();
+		l:Notification("\240\159\148\129 \196\144\195\163 l\195\160m m\225\187\155i danh s\195\161ch!", 2);
+	end });
+local function B()
+	local l = Instance.new("Animation");
+	l.AnimationId = "rbxassetid://148840371";
+	e = b:LoadAnimation(l);
+	e.Looped = true;
+end;
+local h = k:AddToggle({ Name = "\240\159\154\128 b\225\186\175t \196\145\225\186\167u d\195\173", Default = false, Callback = function(Y)
+			r = Y;
+			if not j then
+				l:Notification("\226\154\160\239\184\143 H\195\163y ch\225\187\141n ng\198\176\225\187\157i ch\198\161i tr\198\176\225\187\155c!", 3);
+				flyJumpToggle:Set(false);
+				return;
+			end;
+			if r then
+				if not e then
+					B();
+				end;
+				e:Play();
+				task.spawn(function()
+					while r and (b and b.Parent) do
+						local l = s.Character;
+						if not l then
+							break;
+						end;
+						local Y = l:FindFirstChild("Left Leg") or l:FindFirstChild("LeftLowerLeg");
+						local d = l:FindFirstChild("Right Leg") or l:FindFirstChild("RightLowerLeg");
+						if Y then
+							pcall(function()
+								Y.CFrame = Y.CFrame * CFrame.Angles(math.rad(-45), 0, 0);
+							end);
+						end;
+						if d then
+							pcall(function()
+								d.CFrame = d.CFrame * CFrame.Angles(math.rad(-45), 0, 0);
+							end);
+						end;
+						task.wait(.1);
+					end;
+				end);
+				task.spawn(function()
+					while r and (j and (j.Character and s.Character)) do
+						local l = j.Character:FindFirstChild("HumanoidRootPart");
+						local Y = s.Character:FindFirstChild("HumanoidRootPart");
+						if l and Y then
+							Y.CFrame = l.CFrame * CFrame.new(0, 0, .5);
+							task.wait(.02);
+							Y.CFrame = l.CFrame * CFrame.new(0, 0, 1);
+						else
+							break;
+						end;
+						task.wait(.01);
+					end;
+				end);
+				l:Notification("\226\156\133 ", 3);
+			else
+				if e then
+					e:Stop();
+				end;
+				l:Notification("\226\155\148 ", 3);
+			end;
+		end });
+k:AddSection("\240\159\144\191\239\184\143\240\159\167\130s\195\179c l\225\187\141");
+local t = false;
+local C = nil;
+local function Q()
+	return b.RigType == Enum.HumanoidRigType.R15 and "R15" or "R6";
+end;
+local E = Instance.new("Animation");
+E.Name = "aaa";
+E.Parent = workspace;
+E.AnimationId = Q() == "R15" and "rbxassetid://698251653" or "rbxassetid://72042024";
+local function R()
+	while t do
+		if not C then
+			C = b.Animator:LoadAnimation(E);
+		end;
+		C:Play();
+		C:AdjustSpeed(.7);
+		C.TimePosition = .6;
+		task.wait(.1);
+		while t and (C and C.TimePosition < .7) do
+			task.wait(.05);
+		end;
+		if C then
+			C:Stop();
+			C:Destroy();
+			C = nil;
+		end;
+	end;
+end;
+local u = k:AddToggle({ Name = "s\195\179c l\225\187\141", Default = false, Callback = function(Y)
+			t = Y;
+			if t then
+				R();
+				l:Notification("\226\156\133 \196\144ang ch\198\161i animation nh\225\186\163y!", 3);
+			elseif C then
+				C:Stop();
+				C:Destroy();
+				C = nil;
+				l:Notification("\226\155\148 \196\144\195\163 d\225\187\171ng animation nh\225\186\163y!", 3);
+			end;
+		end });
+local L = {
+		Enabled = false,
+		BaseSpeed = 5,
+		CurrentSpeed = 5,
+		RandomSpin = Vector3.new(.5, .2, .5),
+		DragCoefficient = .85,
+		SmoothTransition = true,
+		SwimMode = false,
+	};
+local z = {
+		BodyVelocity = nil,
+		BodyAngularVelocity = nil,
+		LastPosition = nil,
+		DriftParticles = nil,
+	};
+local function V(l)
+	if z.DriftParticles then
+		z.DriftParticles:Destroy();
+	end;
+	local Y = l:FindFirstChild("HumanoidRootPart");
+	if not Y then
+		return;
+	end;
+	local d = Instance.new("ParticleEmitter");
+	d.Texture = "rbxassetid://242699077";
+	d.LightEmission = .8;
+	d.Size = NumberSequence.new(.3);
+	d.Transparency = NumberSequence.new(.5);
+	d.Speed = NumberRange.new(.5);
+	d.Lifetime = NumberRange.new(.8);
+	d.Rate = 15;
+	d.Rotation = NumberRange.new(0, 360);
+	d.VelocitySpread = 30;
+	d.Parent = Y;
+	z.DriftParticles = d;
+end;
+local function a()
+	local Y = s.Character;
+	if not Y then
+		return;
+	end;
+	local d = Y:FindFirstChildOfClass("Humanoid");
+	local W = Y:FindFirstChild("HumanoidRootPart");
+	if not d or not W then
+		return;
+	end;
+	d.PlatformStand = true;
+	d.AutoRotate = false;
+	if L.SmoothTransition then
+		local l = TweenInfo.new(1.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out);
+		local Y = W.Position + Vector3.new(0, 3, 0);
+		(q:Create(W, l, { CFrame = CFrame.new(Y) })):Play();
+	end;
+	z.BodyVelocity = Instance.new("BodyVelocity");
+	z.BodyVelocity.MaxForce = Vector3.new(4000, 4000, 4000);
+	z.BodyVelocity.Velocity = Vector3.new(0, 0, 0);
+	z.BodyVelocity.P = 1000;
+	z.BodyVelocity.Parent = W;
+	z.BodyAngularVelocity = Instance.new("BodyAngularVelocity");
+	z.BodyAngularVelocity.MaxTorque = Vector3.new(2000, 2000, 2000);
+	z.BodyAngularVelocity.AngularVelocity = L.RandomSpin;
+	z.BodyAngularVelocity.P = 1500;
+	z.BodyAngularVelocity.Parent = W;
+	z.LastPosition = W.Position;
+	V(Y);
+	L.Enabled = true;
+	l:Notification("\226\156\133 \196\144\195\163 b\225\186\173t Chill Guy mode!", 3);
+end;
+local function g()
+	local Y = s.Character;
+	if not Y then
+		return;
+	end;
+	local d = Y:FindFirstChildOfClass("Humanoid");
+	if d then
+		d.PlatformStand = false;
+		d.AutoRotate = true;
+	end;
+	if z.BodyVelocity then
+		z.BodyVelocity:Destroy();
+	end;
+	if z.BodyAngularVelocity then
+		z.BodyAngularVelocity:Destroy();
+	end;
+	if z.DriftParticles then
+		z.DriftParticles:Destroy();
+	end;
+	L.Enabled = false;
+	l:Notification("\226\155\148 \196\144\195\163 t\225\186\175t Chill Guy mode!", 3);
+end;
+local function G()
+	if not L.Enabled then
+		return;
+	end;
+	local l = s.Character;
+	if not l then
+		return;
+	end;
+	local Y = l:FindFirstChild("HumanoidRootPart");
+	if not Y or not z.BodyVelocity then
+		return;
+	end;
+	local W = Vector3.new(d:IsKeyDown(Enum.KeyCode.D) and 1 or d:IsKeyDown(Enum.KeyCode.A) and -1 or 0, d:IsKeyDown(Enum.KeyCode.Space) and 1 or d:IsKeyDown(Enum.KeyCode.LeftControl) and -1 or 0, d:IsKeyDown(Enum.KeyCode.W) and -1 or d:IsKeyDown(Enum.KeyCode.S) and 1 or 0);
+	if W.Magnitude > 0 then
+		local l = workspace.CurrentCamera;
+		local Y = (l.CFrame.RightVector * W.X + l.CFrame.UpVector * W.Y) + l.CFrame.LookVector * W.Z;
+		if L.SwimMode then
+			z.BodyVelocity.Velocity = z.BodyVelocity.Velocity:Lerp(Y * L.CurrentSpeed, .05);
+		else
+			z.BodyVelocity.Velocity = Y * L.CurrentSpeed;
+		end;
+	else
+		z.BodyVelocity.Velocity = z.BodyVelocity.Velocity * L.DragCoefficient;
+	end;
+	if z.BodyAngularVelocity then
+		local l = L.SwimMode and .1 or .3;
+		z.BodyAngularVelocity.AngularVelocity = L.RandomSpin + Vector3.new(math.random(-l, l), math.random(-l * .5, l * .5), math.random(-l, l));
+	end;
+end;
+W.Heartbeat:Connect(G);
+local X = k:AddToggle({ Name = "Chill Guy", Default = false, Callback = function(l)
+			L.Enabled = l;
+			if L.Enabled then
+				a();
+			else
+				g();
+			end;
+		end });
+b.Died:Connect(function()
+	t = false;
+	r = false;
+	L.Enabled = false;
+	u:Set(false);
+	h:Set(false);
+	X:Set(false);
+	if C then
+		C:Stop();
+		C:Destroy();
+		C = nil;
+	end;
+	if e then
+		e:Stop();
+	end;
+	g();
+end);
+k:AddSection("other");
+k:AddButton({ Name = "B\225\186\173t Shader Hi\225\187\135u \225\187\168ng", Callback = function()
+		(loadstring(game:HttpGet("https://raw.githubusercontent.com/anuragaming1/anura/refs/heads/main/Shader.lua")))();
+		l:Notification("\226\156\133 \196\144\195\163 b\225\186\173t hi\225\187\135u \225\187\169ng shader!", 3);
+	end });
