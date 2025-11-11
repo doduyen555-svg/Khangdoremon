@@ -3,7 +3,7 @@
 
 local CoreGui = game:GetService("StarterGui")
     CoreGui:SetCore("SendNotification", {
-        Title = "khang doremon hub",
+        Title = "Khang doremon hub",
         Text = "Loading script",
         Icon = "rbxthumb://type=Asset&id=119525744204425&w=150&h=150",
         Duration = 6,
@@ -12,9 +12,9 @@ local CoreGui = game:GetService("StarterGui")
 
 local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
 local Window = WindUI:CreateWindow({
-    Title = "khang doremon Hub | Night In The Forest",
+    Title = "Khang doremon hub | Night In The Forest",
     Icon = "rbxassetid://119525744204425",
-    Author = "by khang",
+    Author = "by khang2742_q",
     Folder = "Khang doremon Hub",
     Size = UDim2.fromOffset(580, 340),
     Transparent = true,
@@ -62,9 +62,9 @@ local Tabs = {
 
 
 Tabs.Info:Button({
-    Title = "Copy link discord",
+    Title = "Copy tên tiktok",
     Callback = function()
-      setclipboard("discord.gg/yGEzGGNyeM")         
+      setclipboard("khang2742_q")         
     end
 })
 
