@@ -78,7 +78,7 @@ rainbowStroke(d)
 e = Instance.new("TextLabel", b)
 e.Size = UDim2.new(1, 0, 0, 30)
 e.BackgroundTransparency = 1
-e.Text = "Farm Diamond | Khang doremon hub"
+e.Text = "Farm Diamond | khang doremon"
 e.TextColor3 = Color3.fromRGB(255, 255, 255)
 e.Font = Enum.Font.GothamBold
 e.TextSize = 14
