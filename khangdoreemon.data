@@ -1,0 +1,182 @@
+local CoreGui = game:GetService("StarterGui")
+
+CoreGui:SetCore("SendNotification", {
+    Title = "khang doremon"
+    Text = "Đang khởi động script đừng thoát nha mấy ní",
+    Icon = "rbxassetid://119525744204425",
+    Duration = 6
+})
+-- khang doremon Cinematic Intro
+local CoreGui = game:GetService("CoreGui")
+
+-- Giao diện chính
+local ScreenGui = Instance.new("ScreenGui", CoreGui)
+ScreenGui.IgnoreGuiInset = true
+ScreenGui.ResetOnSpawn = false
+
+-- Lớp làm mờ nền
+local BlurFrame = Instance.new("Frame", ScreenGui)
+BlurFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+BlurFrame.BackgroundTransparency = 0.4 -- Độ mờ nền
+BlurFrame.Size = UDim2.new(1, 0, 1, 0)
+
+-- Hiệu ứng chữ
+local TextLabel = Instance.new("TextLabel", ScreenGui)
+TextLabel.Size = UDim2.new(1, 0, 1, 0)
+TextLabel.BackgroundTransparency = 1
+TextLabel.Text = "khang doremon"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextStrokeTransparency = 0.2
+TextLabel.TextStrokeColor3 = Color3.fromRGB(0, 170, 255)
+TextLabel.Font = Enum.Font.GothamBlack
+TextLabel.TextScaled = true
+TextLabel.TextTransparency = 1 -- Bắt đầu ẩn
+
+-- Hiệu ứng fade in/out
+local TweenService = game:GetService("TweenService")
+
+local fadeIn = TweenService:Create(TextLabel, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextTransparency = 0})
+local fadeOut = TweenService:Create(TextLabel, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {TextTransparency = 1})
+local fadeBg = TweenService:Create(BlurFrame, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {BackgroundTransparency = 1})
+
+-- Chạy hiệu ứng
+fadeIn:Play()
+task.wait(2) -- hiển thị chữ trong 2 giây
+fadeOut:Play()
+fadeBg:Play()
+
+-- Xoá sau 3.5s
+task.wait(3.5)
+ScreenGui:Destroy()
+local WindUI =
+
+loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
+local Window = WindUI:CreateWindow({
+    Title = "99 đêm",
+    Icon = "rbxassetid://119525744204425",
+    Author = "by khang2742_q",
+    Folder = "khang",
+    Size = UDim2.fromOffset(580, 340),
+    Transparent = true,
+    Theme = "Dark",
+    Resizable = true,
+    SideBarWidth = 150,
+    Background = "", 
+    BackgroundImageTransparency = 0.42,
+    HideSearchBar = true,
+    ScrollBarEnabled = false,
+})
+
+Window:EditOpenButton({
+    Title = "Open Example UI",
+    Icon = "monitor",
+    CornerRadius = UDim.new(0,16),
+    StrokeThickness = 2,
+    Color = ColorSequence.new( 
+        Color3.fromHex("FF0F7B"), 
+        Color3.fromHex("F89B29")
+    ),
+    Draggable = true,
+})
+
+local Tabs = {
+    Info = Window:Tab({ Title = "mạng xã hội", Icon = "info" }),
+    Main = Window:Tab({ Title = "Main", Icon = "book" }),
+    Bring = Window:Tab({ Title = "Bring", Icon = "gem" }),
+    Teleport= Window:Tab({ Title = "Teleport", Icon = "compass" }),
+    Visual = Window:Tab({ Title = "Visual", Icon = "bookmark" }),
+    Esp = Window:Tab({ Title = "Esp", Icon = "ghost" }),
+}
+
+Tabs.Info:Button({
+    Title = "kênh tik",
+    Callback = function()
+      setclipboard("khang2742_q")         
+    end
+})
+local CoreGui = game:GetService("StarterGui")
+CoreGui:SetCore("SendNotification", {
+    Title = "khang doremon hub",
+    Text = "đang bật script chờ xíu đi đéo chờ đc thì th",
+    Icon = "rbxassetid://119525744204425",
+    Duration = 6
+})
+-- khang doremon Cinematic Intro
+local CoreGui = game:GetService("CoreGui")
+
+-- Giao diện chính
+local ScreenGui = Instance.new("ScreenGui", CoreGui)
+ScreenGui.IgnoreGuiInset = true
+ScreenGui.ResetOnSpawn = false
+
+-- Lớp làm mờ nền
+local BlurFrame = Instance.new("Frame", ScreenGui)
+BlurFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+BlurFrame.BackgroundTransparency = 0.4 -- Độ mờ nền
+BlurFrame.Size = UDim2.new(1, 0, 1, 0)
+
+-- Hiệu ứng chữ
+local TextLabel = Instance.new("TextLabel", ScreenGui)
+TextLabel.Size = UDim2.new(1, 0, 1, 0)
+TextLabel.BackgroundTransparency = 1
+TextLabel.Text = "khang doremon"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextStrokeTransparency = 0.2
+TextLabel.TextStrokeColor3 = Color3.fromRGB(0, 170, 255)
+TextLabel.Font = Enum.Font.GothamBlack
+TextLabel.TextScaled = true
+TextLabel.TextTransparency = 1 -- Bắt đầu ẩn
+
+-- Hiệu ứng fade in/out
+local TweenService = game:GetService("TweenService")
+
+local fadeIn = TweenService:Create(TextLabel, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {TextTransparency = 0})
+local fadeOut = TweenService:Create(TextLabel, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {TextTransparency = 1})
+local fadeBg = TweenService:Create(BlurFrame, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {BackgroundTransparency = 1})
+
+-- Chạy hiệu ứng
+fadeIn:Play()
+task.wait(2) -- hiển thị chữ trong 2 giây
+fadeOut:Play()
+fadeBg:Play()
+
+-- Xoá sau 3.5s
+task.wait(3.5)
+ScreenGui:Destroy()
+local WindUI =
+
+loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
+local Window = WindUI:CreateWindow({
+    Title = "khang 99 đêm🌑🌒",
+    Icon = "rbxassetid://119525744204425",
+    Author = "by khang2742_q",
+    Folder = "khang doremon",
+    Size = UDim2.fromOffset(580, 340),
+    Transparent = true,
+    Theme = "Dark",
+    Resizable = true,
+    SideBarWidth = 150,
+    Background = "", 
+    BackgroundImageTransparency = 0.42,
+    HideSearchBar = true,
+    ScrollBarEnabled = false,
+})
+
+Window:EditOpenButton({
+    Title = "Open Example UI",
+    Icon = "monitor",
+    CornerRadius = UDim.new(0,16),
+    StrokeThickness = 2,
+    Color = ColorSequence.new( 
+        Color3.fromHex("FF0F7B"), 
+        Color3.fromHex("F89B29")
+    ),
+    Draggable = true,
+})
+
+local Tabs = {
+    Info = Window:Tab({ Title = " mạng xã hội", Icon = "info" }),
+    Main = Window:Tab({ Title = "Main", Icon = "book" }),
+    Bring = Window:Tab({ Title = "Bring", Icon = "gem" }),
+    Teleport= Window:Tab({ Title = "Teleport", Icon = "compass" }),
+    Visual = Window:Tab({ Title = "Visual",
