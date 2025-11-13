@@ -91,7 +91,7 @@ local Tabs = {
 Tabs.Info:Button({
     Title = "kênh tik",
     Callback = function()
-      setclipboard("tiktok.com/@teoscrvn")         
+      setclipboard("khang2742_q")         
     end
 })
 local CoreGui = game:GetService("StarterGui")
