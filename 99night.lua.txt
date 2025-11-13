@@ -1,0 +1,730 @@
+CoreGui cục bộ = trò chơi:GetService("StarterGui")
+
+CoreGui:SetCore("Gửi thông báo", {
+    Tiêu đề = "khang doremon🇻🇳",
+    Text = "Đang khởi động script vui lòng chờ ko cắt cu",
+    Biểu tượng = "rbxassetid://119525744204425",
+    Thời lượng = 6
+})
+-- khang doremon 🇻🇳 Giới thiệu phim
+CoreGui cục bộ = trò chơi:GetService("CoreGui")
+
+-- Giao diện chính
+ScreenGui cục bộ = Instance.new("ScreenGui", CoreGui)
+ScreenGui.IgnoreGuiInset = đúng
+ScreenGui.ResetOnSpawn = sai
+
+-- Lớp làm mờ nền
+BlurFrame cục bộ = Instance.new("Frame", ScreenGui)
+BlurFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+BlurFrame.BackgroundTransparency = 0.4 -- Độ mờ nền
+BlurFrame.Size = UDim2.new(1, 0, 1, 0)
+
+-- Hiệu ứng chữ
+TextLabel cục bộ = Instance.new("TextLabel", ScreenGui)
+Nhãn văn bản.Kích thước = UDim2.new(1, 0, 1, 0)
+TextLabel.BackgroundTransparency = 1
+TextLabel.Text = " khang doremon 🇻🇳"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextStrokeTransparency = 0,2
+Nhãn văn bản. TextStrokeColor3 = Color3.fromRGB(0, 170, 255)
+Nhãn văn bản. Phông chữ = Enum. Phông chữ. GothamBlack
+TextLabel.TextScaled = đúng
+TextLabel.TextTransparency = 1 -- Bắt đầu ẩn
+
+-- Hiệu ứng fade in/out
+TweenService cục bộ = trò chơi:GetService("TweenService")
+
+fadeIn cục bộ = TweenService:Tạo(Nhãn văn bản, TweenInfo.mới(1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Độ trong suốt của văn bản = 0})
+fadeOut cục bộ = TweenService:Tạo(Nhãn văn bản, TweenInfo.mới(1, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {Độ trong suốt của văn bản = 1})
+fadeBg cục bộ = TweenService:Tạo(BlurFrame, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {BackgroundTransparency = 1})
+
+-- Chạy hiệu ứng
+fadeIn:Phát()
+task.wait(2) -- hiển thị chữ trong 2 giây
+fadeOut:Phát()
+fadeBg:Phát()
+
+-- Xoá sau 3.5s
+nhiệm vụ.chờ(3.5)
+ScreenGui:Destroy()
+WindUI cục bộ =
+
+loadstring(trò chơi:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
+Cửa sổ cục bộ = WindUI:CreateWindow({
+    Tiêu đề = "khang doremon🇻🇳99 đêm🌑🌒",
+    Biểu tượng = "rbxassetid://121471149924300",
+    Tác giả = "bởi khang doremon 🇻🇳",
+    Thư mục = "khang",
+    Kích thước = UDim2.fromOffset(580, 340),
+    Trong suốt = đúng,
+    Chủ đề = "Tối",
+    Có thể thay đổi kích thước = đúng,
+    Chiều rộng thanh bên = 150,
+    Nền = "",
+    Độ trong suốt của hình ảnh nền = 0,42,
+    HideSearchBar = đúng,
+    ScrollBarEnabled = sai,
+})
+
+Cửa sổ:Chỉnh sửaMởNút({
+    Tiêu đề = "Giao diện người dùng ví dụ mở",
+    Biểu tượng = "màn hình",
+    CornerRadius = UDim.new(0,16),
+    Độ dày nét = 2,
+    Màu = ColorSequence.new(
+        Color3.fromHex("FF0F7B"),
+        Color3.fromHex("F89B29")
+    ),
+    Có thể kéo = đúng,
+})
+
+Tab cục bộ = {
+    Info = Window:Tab({ Title = "mạng xã hội🌐", Icon = "info" }),
+    Main = Window:Tab({ Title="trang chủ", Icon = "book" }),
+    Mang = Window:Tab({ Title = "nhặt đồ", Icon = "gem" }),
+    Teleport= Window:Tab({ Title = "(dịch chuyển)Dịch chuyển", Icon = "la bàn" }),
+    Visual = Window:Tab({ Title = "định vị :)", Icon = "bookmark" }),
+    Esp = Window:Tab({ Title = "esp chả bt là gì:)", Icon = "ma" }),
+}
+
+Tabs.Info:Button({
+    Title = "tên tik",
+    Gọi lại = hàm()
+      setclipboard("@khang2742_q")         
+    kết thúc
+})
+Tabs.Main:Section({Title = "plant🌳"})
+Người chơi cục bộ = trò chơi: GetService("Người chơi")
+local LocalPlayer = Người chơi.LocalPlayer
+Camera cục bộ = không gian làm việc.CurrentCamera
+local RunService = game:GetService("RunService")
+Không gian làm việc cục bộ = trò chơi:GetService("Không gian làm việc")
+VirtualInputManager cục bộ = trò chơi:GetService("VirtualInputManager")
+cục bộ ReplicatedStorage = trò chơi:GetService("ReplicatedStorage")
+Ba lô cục bộ = LocalPlayer:WaitForChild("Ba lô")
+ToolDamageObject cục bộ = ReplicatedStorage:WaitForChild("RemoteEvents"):WaitForChild("ToolDamageObject")
+cục bộ Http = trò chơi:GetService("HttpService")
+TPS cục bộ = trò chơi:GetService("Dịch vụ dịch chuyển")
+RemoteEvents cục bộ = ReplicatedStorage:WaitForChild("RemoteEvents")
+
+TweenService cục bộ = trò chơi:GetService("TweenService")
+
+Chiếu sáng cục bộ = trò chơi:GetService("Ánh sáng")
+
+người chơi cục bộ = Người chơi.LocalPlayer
+
+autoTreeFarmActive cục bộ = false
+autoTreeFarmThread cục bộ
+
+hàm cục bộ getAllTrees()
+	bản đồ cục bộ = không gian làm việc:FindFirstChild("Bản đồ")
+	nếu không phải bản đồ thì trả về {} kết thúc
+	địa danh địa phương = bản đồ:FindFirstChild("Landmarks") hoặc bản đồ:FindFirstChild("Foliage")
+	nếu không phải là điểm mốc thì trả về {} kết thúc
+
+	cây địa phương = {}
+	đối với _, cây trong ipairs(landmarks:GetChildren()) làm
+		nếu tree.Name == "Cây nhỏ" và tree:IsA("Model") và tree.Parent thì
+			thân cây cục bộ = cây:FindFirstChild("Trunk") hoặc cây.PrimaryPart
+			nếu thân cây thì
+				table.insert(cây, {cây = cây, thân cây = thân cây })
+			kết thúc
+		kết thúc
+	kết thúc
+	cây trả lại
+kết thúc
+
+hàm cục bộ getAxe()
+	inv cục bộ = LocalPlayer:FindFirstChild("Kho hàng")
+	nếu không inv thì trả về nil end
+	trả về inv:FindFirstChild("Old Axe") hoặc inv:FindFirstChildWhichIsA("Tool")
+kết thúc
+
+hàm toggleAutoTreeFarm(trạng thái)
+	autoTreeFarmActive = trạng thái
+
+	nếu trạng thái thì
+		autoTreeFarmThread = task.spawn(hàm()
+			trong khi autoTreeFarmActive làm
+				cây cục bộ = getAllTrees()
+				đối với _, t trong ipairs(trees) làm
+					nếu không phải autoTreeFarmActive thì ngắt kết thúc
+					nếu t.tree và t.tree.Parent thì
+						local char = LocalPlayer.Character hoặc LocalPlayer.CharacterAdded:Wait()
+						hrp cục bộ = char:FindFirstChild("HumanoidRootPart")
+						nếu hrp và t.trunk thì
+							bù trừ cục bộ = {
+								Vector3.new(3, 0, 0),
+								Vector3.new(-3, 0, 0),
+								Vector3.new(0, 0, 3),
+								Vector3.new(0, 0, -3)
+							}
+							local randomOffset = offset[math.random(1, #offset)]
+							hrp.CFrame = CFrame.new(t.trunk.Position + randomOffset, t.trunk.Position)
+
+							nhiệm vụ.chờ(0.1)
+
+							rìu cục bộ = getAxe()
+							nếu rìu thì
+								nếu axe.Parent == Backpack thì
+									axe.Parent = char
+									task.wait(0.15)
+								kết thúc
+
+								trong khi t.tree.Parent và autoTreeFarmActive thực hiện
+									pcall(hàm() axe:Kích hoạt() kết thúc)
+									đối số cục bộ = {
+										t.cây,
+										rìu,
+										"1_8264699301",
+										t.trunk.CFrame
+									}
+									pcall(function() ToolDamageObject:InvokeServer(unpack(args)) kết thúc)
+									nhiệm vụ.chờ(1)
+								kết thúc
+							kết thúc
+						kết thúc
+					kết thúc
+					nhiệm vụ.chờ(0.5)
+				kết thúc
+				nhiệm vụ.chờ(1)
+			kết thúc
+		kết thúc)
+	khác
+		autoTreeFarmActive = sai
+	kết thúc
+kết thúc
+
+Tabs.Main:Toggle({
+    Title = "Auto farm gỗ",
+    Giá trị = sai,
+    Gọi lại = hàm(trạng thái)
+    toggleAutoTreeFarm(trạng thái)
+    kết thúc
+})
+
+Tabs.Main:Toggle({
+    Tiêu đề = "Trang trại nhấp chuột tự động",
+    Giá trị = sai,
+    Gọi lại = hàm(trạng thái)
+    autoClickEnabled = trạng thái
+    nếu autoClickEnabled thì
+        autoClickThread = task.spawn(hàm()
+            trong khi autoClickEnabled làm
+                VirtualInputManager:SendMouseButtonEvent(0, 0, 0, đúng, trò chơi, 0)
+                nhiệm vụ.chờ(0,05)
+                VirtualInputManager:SendMouseButtonEvent(0, 0, 0, false, trò chơi, 0)
+                nhiệm vụ.chờ(0,05)
+            kết thúc
+        kết thúc)
+    khác
+        nếu autoClickThread thì
+            task.cancel(autoClickThread)
+            autoClickThread = không
+        kết thúc
+    kết thúc     
+    kết thúc
+})
+
+Tabs.Main:Section({Title = "giết hết =)"})
+killAuraToggle cục bộ = false
+bán kính cục bộ = 200
+infRangeKillAuraToggle cục bộ = false
+công cụ cục bộDamageIDs = {
+    ["Rìu cũ"] = "1_8982038982",
+    ["Rìu tốt"] = "112_8982038982",
+    ["Rìu mạnh"] = "116_8982038982",
+    ["Cưa máy"] = "647_8992824875",
+    ["Giáo"] = "196_8999010016"
+}
+hàm cục bộ getAnyToolWithDamageID()
+    đối với toolName, damageID theo cặp (toolsDamageIDs) thì
+        công cụ cục bộ = player.Inventory:FindFirstChild(toolName)
+        nếu công cụ thì
+            công cụ trả lại, damageID
+        kết thúc
+    kết thúc
+    trả về nil, nil
+kết thúc
+
+hàm cục bộ equipTool(tool)
+    nếu công cụ thì
+        RemoteEvents.EquipItemHandle:FireServer("FireAllClients", công cụ)
+    kết thúc
+kết thúc
+
+hàm cục bộ unequipTool(tool)
+    nếu công cụ thì
+        RemoteEvents.UnequipItemHandle:FireServer("FireAllClients", công cụ)
+    kết thúc
+kết thúc
+
+hàm cục bộ killAuraLoop()
+    trong khi killAuraToggle làm
+        ký tự cục bộ = player.Character hoặc player.CharacterAdded:Wait()
+        hrp cục bộ = ký tự:FindFirstChild("HumanoidRootPart")
+        nếu hrp thì
+            công cụ cục bộ, damageID = getAnyToolWithDamageID()
+            nếu công cụ và damageID thì
+                equipTool(công cụ)
+
+                đối với _, mob trong ipairs(Workspace.Characters:GetChildren()) làm
+                    nếu mob:IsA("Model") thì
+                        phần cục bộ = mob:FindFirstChildWhichIsA("BasePart")
+                        nếu một phần và (phần.Vị trí - hrp.Vị trí).Độ lớn <= bán kính thì
+                            pcall(hàm()
+                                RemoteEvents.ToolDamageObject:InvokeServer(
+                                    đám đông,
+                                    dụng cụ,
+                                    ID thiệt hại,
+                                    CFrame.new(part.Position)
+                                )
+                            kết thúc)
+                        kết thúc
+                    kết thúc
+                kết thúc
+
+                nhiệm vụ.chờ(0.1)
+            khác
+                nhiệm vụ.chờ(1)
+            kết thúc
+        khác
+            nhiệm vụ.chờ(0.1)
+        kết thúc
+    kết thúc
+kết thúc
+
+hàm cục bộ getAllModelsInFolder(thư mục)
+    mô hình cục bộ = {}
+    đối với _, obj trong ipairs(folder:GetDescendants()) làm
+        nếu obj:IsA("Model") thì
+            table.insert(mô hình, obj)
+        kết thúc
+    kết thúc
+    mô hình trả lại
+kết thúc
+
+hàm cục bộ findAnyBasePart(model)
+    đối với _, con cháu trong ipairs(model:GetDescendants()) làm
+        nếu descendant:IsA("BasePart") thì
+            hậu duệ trở về
+        kết thúc
+    kết thúc
+    trả về nil
+kết thúc
+
+hàm cục bộ killAuraInfiniteRangeLoop()
+    trong khi infRangeKillAuraToggle làm
+        ký tự cục bộ = player.Character hoặc player.CharacterAdded:Wait()
+        hrp cục bộ = ký tự:FindFirstChild("HumanoidRootPart")
+        nếu hrp thì
+            công cụ cục bộ, damageID = getAnyToolWithDamageID()
+            nếu công cụ và damageID thì
+                equipTool(công cụ)
+
+                mapFolder cục bộ = Không gian làm việc:FindFirstChild("Bản đồ")
+                ký tự cục bộFolder = mapFolder và mapFolder:FindFirstChild("Characters")
+                nếu ký tựFolder thì
+                    mob cục bộ = getAllModelsInFolder(charactersFolder)
+                    đối với _, mob trong ipairs(mobs) làm
+                        phần cục bộ = findAnyBasePart(mob)
+                        nếu một phần thì
+                            pcall(hàm()
+                                RemoteEvents.ToolDamageObject:InvokeServer(
+                                    đám đông,
+                                    dụng cụ,
+                                    ID thiệt hại,
+                                    CFrame.new(part.Position)
+                                )
+                            kết thúc)
+                        kết thúc
+                    kết thúc
+                kết thúc
+
+                nhiệm vụ.chờ(0.1)
+            khác
+                nhiệm vụ.chờ(1)
+            kết thúc
+        khác
+            nhiệm vụ.chờ(0.1)
+        kết thúc
+    kết thúc
+kết thúc
+
+
+
+
+Tabs.Main:Toggle({
+    Title = "Diệt khí (giết sinh vật)",
+    Giá trị = sai,
+    Gọi lại = hàm(trạng thái)
+        killAuraToggle = trạng thái
+    nếu trạng thái thì
+        task.spawn(killAuraLoop)
+    khác
+        công cụ cục bộ, _ = getAnyToolWithDamageID()
+        unequipTool(công cụ)
+    kết thúc
+    kết thúc
+})
+
+
+
+
+
+Tabs.Main:Slider({
+	Tiêu đề = "Bán kính hào quang tiêu diệt",
+	Giá trị = {Tối thiểu = 5, Tối đa = 200, Mặc định = 20},
+    Bước = 1,
+	Gọi lại = hàm(giá trị)
+		bán kính = math.clamp(giá trị, 20, 500)
+	kết thúc
+})
+
+
+Tabs.Main:Toggle({
+    Tiêu đề = "Hào quang tiêu diệt tầm thấp",
+    Giá trị = sai,
+    Gọi lại = hàm(trạng thái)
+    infRangeKillAuraToggle = trạng thái
+    nếu trạng thái thì
+        task.spawn(killAuraInfiniteRangeLoop)
+    khác
+        công cụ cục bộ, _ = getAnyToolWithDamageID()
+        unequipTool(công cụ)
+    kết thúc
+    kết thúc
+})
+
+
+
+
+Tabs.Main:Section({Title = "Craft"})
+
+
+
+
+CraftItemRemote cục bộ = ReplicatedStorage:WaitForChild("RemoteEvents"):WaitForChild("CraftItem")
+
+hàng thủ công địa phương = {
+    "Bản đồ",
+    "Giường cũ",
+    "Khu đất nông trại",
+    "Bẫy thỏ",
+    "Bàn chế tạo 2",
+    "Đồng hồ mặt trời",
+    "Giường thường",
+    "La bàn",
+    "Tủ đông",
+    "Khu đất nông trại",
+    "Lưu trữ nước mưa bằng gỗ",
+    "Cái kệ",
+    "Bức tường gỗ",
+    "Bẫy gấu",
+    "Bàn chế tạo 3",
+    "Nồi nấu chậm",
+    "Giường tốt",
+    "Bệ tăng cường",
+    "Bộ xử lý nhiên liệu sinh học",
+    "Ngọn đuốc",
+    "Cột thu lôi",
+    "Bàn chế tạo số 4",
+    "Thùng đạn",
+    "Giường khổng lồ",
+    "Khoan dầu",
+    "Máy dịch chuyển tức thời"
+}
+
+selectedCraftItems cục bộ = {}
+
+Tabs.Main:Dropdown({
+    Tiêu đề = "Chọn vật phẩm thủ công",
+    Giá trị = craftItem,
+    Giá trị = {},
+    Đa = đúng,
+    AllowNone = đúng,
+    Gọi lại = hàm (Đã chọn)
+        selectedCraftItems = Đã chọn
+    kết thúc
+})
+
+
+Tabs.Main:Button({
+    Tiêu đề = "Vật phẩm chế tạo tự động",
+    Gọi lại = hàm()
+        nếu #selectedCraftItems == 0 thì
+            trở lại
+        kết thúc
+
+        
+        đối với _, mục trong ipairs(selectedCraftItems) làm
+            task.spawn(hàm()
+                pcall(hàm()
+                    CraftItemRemote:InvokeServer(mục)
+                kết thúc)
+            kết thúc)
+            nhiệm vụ.chờ(0.1)
+        kết thúc
+    kết thúc
+})
+
+
+
+Tabs.Main:Section({Title = "Sức khỏe"})
+
+autoTeleportLowHealth cục bộ = false
+ngưỡng sức khỏe thấp cục bộ = 28
+
+ 
+
+Tabs.Main:Toggle({
+    Tiêu đề = "Chống hư hại",
+    Giá trị = sai,
+    Gọi lại = hàm(trạng thái)
+        autoTeleportLowHealth = trạng thái
+    kết thúc
+})
+
+
+Tabs.Main:Slider({
+    Tiêu đề = "Sức khỏe thấp",
+    Giá trị = {Tối thiểu = 1, Tối đa = 100, Mặc định = 28},
+    Bước = 1,
+    Gọi lại = hàm(giá trị)
+        lowHealthThreshold = val
+    kết thúc
+})
+
+
+trả về cục bộCFrame = CFrame.new(
+    13.287363052368164, 3.999999761581421, 0.36212217807769775,
+    0,6022269129753113, -2,275036159460342e-08, 0,7983249425888062,
+    6.430457055728311e-09, 1, 2.364672191390582e-08,
+    -0,7983249425888062, -9.1070981866892e-09, 0,6022269129753113
+)
+
+
+task.spawn(hàm()
+    trong khi đúng là
+        nếu autoTeleportLowHealth thì
+            ký tự cục bộ = LocalPlayer.Character
+            local humanoid = char và char:FindFirstChild("Humanoid")
+            hrp cục bộ = char và char:FindFirstChild("HumanoidRootPart")
+
+            nếu humanoid và humanoid.Health > 0 và humanoid.Health <= lowHealthThreshold và hrp thì
+                hrp.CFrame = returnCFrame
+            kết thúc
+        kết thúc
+        nhiệm vụ.chờ(0.2)
+    kết thúc
+kết thúc)
+
+
+
+
+
+
+
+
+
+
+
+nhiên liệu địa phươngItems = {
+    "Rương của người ngoài hành tinh",
+    "Da sói đầu đàn",
+    "Mặt trước đe",
+    "Anvil Back",
+    "Quả táo",
+    "Băng quấn",
+    "Xác gấu",
+    "Da gấu",
+    "Quả mọng",
+    "Nhiên liệu sinh học",
+    "Bu-lông",
+    "Quạt hỏng",
+    "Chân thỏ",
+    "Cà rốt",
+    "Than đá",
+    "Cọc xu",
+    "Miếng thịt chín",
+    "Bít tết nấu chín",
+    "Cưa máy",
+    "Người sùng bái",
+    "Viên ngọc sùng bái",
+    "Hoa",
+    "Bình nhiên liệu",
+    "Máy phát ảnh ba chiều",
+    "Rương vật phẩm",
+    "Bản thiết kế hàng rào laser",
+    "Thân da",
+    "Thân Sắt",
+    "Thân Gai",
+    "Nhật ký",
+    "Bộ dụng cụ y tế",
+    "Miếng ăn",
+    "Đèn pin cũ",
+    "Đài phát thanh cũ",
+    "Good Sack",
+    "Rìu tốt",
+    "Súng tia",
+    "Bao tải khổng lồ",
+    "Rìu mạnh",
+    "Thùng dầu",
+    "Động cơ xe cũ",
+    "Súng trường",
+    "Đạn súng trường",
+    "Súng lục ổ quay",
+    "Đạn súng lục ổ quay",
+    "Cây non",
+    "Tấm kim loại",
+    "Bít tết",
+    "Da sói",
+    "Mảnh vỡ của viên ngọc rừng",
+    "Lốp xe",
+    "Máy giặt",
+    "Lò vi sóng bị hỏng"
+}
+
+
+ký tự cục bộ = player.Character hoặc player.CharacterAdded:Wait()
+local humanoidRootPart = ký tự:WaitForChild("HumanoidRootPart")
+mục cục bộFolder = không gian làm việc:WaitForChild("Mục")
+hàng tồn kho cục bộ = player:WaitForChild("Hàng tồn kho")
+
+bao tải cục bộ = nil
+hàm cục bộ findSack()
+    đối với _, mục theo cặp (inventory:GetChildren()) làm
+        nếu string.find(item.Name, "Sack") thì
+            trả lại hàng
+        kết thúc
+    kết thúc
+    trả về nil
+kết thúc
+sack = findSack()
+
+inventory.ChildAdded:Connect(function(child)
+    nếu string.find(child.Name, "Sack") thì
+        bao tải = đứa trẻ
+    kết thúc
+kết thúc)
+inventory.ChildRemoved:Connect(function(child)
+    nếu sack và child == sack thì
+        sack = findSack()
+    kết thúc
+kết thúc)
+
+
+hàm cục bộ isSackFull()
+    nếu không sack thì trả về true end
+    dòng điện cục bộ = sack:GetAttribute("NumberItems")
+    dung lượng cục bộ = sack:GetAttribute("Dung lượng")
+    trả về giá trị hiện tại ~= nil và dung lượng ~= nil và giá trị hiện tại >= dung lượng
+kết thúc
+
+
+hàm cục bộ store(item)
+    nếu không sa thải thì trả về kết thúc
+    phần cục bộ = mục:FindFirstChildWhichIsA("BasePart")
+    nếu một phần thì
+        local oldCFrame = humanoidRootPart.CFrame
+        humanoidRootPart.CFrame = part.CFrame
+        nhiệm vụ.chờ(0.2)
+        ReplicatedStorage:WaitForChild("RemoteEvents"):WaitForChild("RequestBagStoreItem"):InvokeServer(sack, item)
+        nhiệm vụ.chờ(0.2)
+        humanoidRootPart.CFrame = oldCFrame
+    kết thúc
+kết thúc
+
+
+mục được chọn cục bộ = {}
+
+
+Tabs.Bring:Dropdown({
+    Tiêu đề = "Chọn mục",
+    Giá trị = fuelItems,
+    Giá trị = {},
+    Đa = đúng,
+    AllowNone = đúng,
+    Gọi lại = hàm(giá trị)
+        selectedItems = giá trị
+    kết thúc
+})
+
+
+Tabs.Bring:Button({
+    Tiêu đề = "Tự động mang vật phẩm",
+    Gọi lại = hàm()
+        nếu #selectedItems == 0 thì trả về end
+
+        task.spawn(hàm()
+            trong khi không isSackFull() làm
+                đối với _, mục theo cặp (itemsFolder:GetChildren()) làm
+                    nếu table.find(selectedItems, item.Name) thì
+                        cửa hàng(mặt hàng)
+                        nhiệm vụ.chờ(0.25)
+                        nếu isSackFull() thì ngắt kết thúc
+                    kết thúc
+                kết thúc
+                nhiệm vụ.chờ(0.5)
+            kết thúc
+        kết thúc)
+    kết thúc
+})
+
+
+
+
+
+
+
+
+
+
+autoTeleportNight cục bộ = false
+
+
+Tabs.Teleport:Toggle({
+    Tiêu đề = "Tự động quay lại vào ban đêm",
+    Giá trị = sai,
+    Gọi lại = hàm(trạng thái)
+        autoTeleportNight = trạng thái
+    kết thúc
+})
+
+
+trả về cục bộCFrame = CFrame.new(
+    13.287363052368164, 3.999999761581421, 0.36212217807769775,
+    0,6022269129753113, -2,275036159460342e-08, 0,7983249425888062,
+    6.430457055728311e-09, 1, 2.364672191390582e-08,
+    -0,7983249425888062, -9.1070981866892e-09, 0,6022269129753113
+)
+
+
+task.spawn(hàm()
+    trong khi đúng là
+        nếu autoTeleportNight thì
+            giờ địa phương = Lighting.ClockTime
+            nếu giờ >= 18 hoặc giờ <= 6 thì
+                ký tự cục bộ = LocalPlayer.Character
+                nếu char và char:FindFirstChild("HumanoidRootPart") thì
+                    char.HumanoidRootPart.CFrame = returnCFrame
+                kết thúc
+            kết thúc
+        kết thúc
+        nhiệm vụ.chờ(1)
+    kết thúc
+kết thúc)
+
+
+
+
+
+
+Tabs.Teleport:Button({
+    Tiêu đề = "Dịch chuyển đến trại",
+    Gọi lại = hàm()
+        ký tự cục bộ = LocalPlayer.Character
+        nếu char và char:FindFirstChild("HumanoidRootPart") thì
+            char.HumanoidRootPart.CFrame = CFrame.new(
+                13.287363052368164, 3.999999761581421, 0.362122178077		
