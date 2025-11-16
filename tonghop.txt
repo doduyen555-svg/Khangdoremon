@@ -1,0 +1,364 @@
+ScreenGui cục bộ = Instance.new("ScreenGui")
+ImageButton cục bộ = Instance.new("ImageButton")
+UICorner cục bộ = Instance.new("UICorner")
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+ImageButton.Parent = ScreenGui
+ImageButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton.BorderSizePixel = 0
+ImageButton.Position = UDim2.new(0,10615778, 0, 0,16217947, 0)
+ImageButton.Size = UDim2.new(0, 40, 0, 40)
+ImageButton.Draggable = đúng
+ImageButton.Image = "http://www.roblox.com/asset/?id=119525744204425"
+
+UICorner.CornerRadius = UDim.new(1, 10)
+UICorner.Parent = ImageButton
+
+ImageButton.MouseButton1Down:Kết nối(hàm()
+    trò chơi: GetService("VirtualInputManager"): SendKeyEvent(true, Enum.KeyCode.End, false, trò chơi)
+kết thúc)
+
+cục bộ Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+lặp lại wait() cho đến khi game:IsLoaded()
+Cửa sổ cục bộ = Fluent:CreateWindow({
+    Title = "gà chơi game Tổng Hợp",
+    Tiêu đề phụ = "Trái cây Blox",
+    Chiều rộng tab = 157,
+    Kích thước = UDim2.fromOffset(450, 300),
+    Acrylic = đúng,
+    Chủ đề = "Thạch anh tím",
+    MinimizeKey = Enum.KeyCode.End
+})
+Tab cục bộ = {
+        Main0=Window:AddTab({ Title="Thông Tin" }),
+        Main1=Cửa sổ:ThêmTab({Tiêu đề="Script Farm" }),
+        Main2=Cửa sổ:ThêmTab({Tiêu đề="Trái cây nông trại" }),
+        Main3=Cửa sổ:ThêmTab({Tiêu đề="Rương trang trại" }),
+        Main4=Cửa sổ:ThêmTab({Tiêu đề="Nhảy tập lệnh" }),
+       Main5=Cửa sổ:ThêmTab({ Title="lin tinh" }),
+}
+    Tabs.Main0:AddButton({
+    Tiêu đề = "Bất hòa",
+    Mô tả = "tiktok khang doremon",
+    Gọi lại = hàm()
+        setclipboard("www.tiktok.com/khang2742_q")
+    kết thúc
+})
+
+    Tabs.Main0:AddButton({
+    Tiêu đề = "Youtuber",
+    Description = "gà gaming",
+    Gọi lại = hàm()
+        setclipboard("https://www.youtube.com/@TBoyRoblox08")
+    kết thúc
+})
+
+    Tabs.Main0:AddButton({
+    Tiêu đề = "Youtuber",
+    Description = "gà Gamer",
+    Gọi lại = hàm()
+        setclipboard("https://www.youtube.com/@gagaming-u2x")
+    kết thúc
+})
+    
+    Tabs.Main1:AddButton({
+    Tiêu đề="NgocBong",
+    Mô tả="",
+    Gọi lại=hàm()
+	  loadstring(game:HttpGet("https://raw.githubusercontent.com/ngocbonggaming/script/refs/heads/main/NgocBongVn.lua"))()
+  kết thúc
+})
+
+Tabs.Main1:AddButton({
+    Tiêu đề="min gaming",
+    Mô tả="",
+    Gọi lại=hàm()
+	  loadstring(trò chơi:HttpGet("https://raw.githubusercontent.com/LuaCrack/Min/refs/heads/main/MinUp27Vn"))()
+  kết thúc
+})
+
+Tabs.Main1:AddButton({
+    Tiêu đề="ak gaming",
+    Mô tả="",
+    Gọi lại=hàm()
+	  loadstring(game:HttpGet("https://raw.githubusercontent.com/Teddyseetink/AkGamingEz/refs/heads/main/AkGaming-V3"))()
+  kết thúc
+})
+
+Tabs.Main1:AddButton({
+    Title="Đạt THG",
+    Mô tả="",
+    Gọi lại=hàm()
+	  loadstring(trò chơi:HttpGet("https://raw.githubusercontent.com/LuaCrack/DatThg/refs/heads/main/DatThgV3Eng"))()
+  kết thúc
+})
+
+Tabs.Main1:AddButton({
+    Tiêu đề="TeddyHub",
+    Mô tả="",
+    Gọi lại=hàm()
+	  lặp lại wait() cho đến khi game:IsLoaded() và game.Players.LocalPlayer
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Teddyseetink/Haidepzai/refs/heads/main/TeddyHub.lua"))()
+  kết thúc
+})
+
+Tabs.Main1:AddButton({
+    Tiêu đề="tdt hub",
+    Mô tả="",
+    Gọi lại=hàm()
+	  loadstring(trò chơi:HttpGet("https://pandadevelopment.net/virtual/file/2a2ea2a6d621379a"))()
+  kết thúc
+})
+
+Tabs.Main1:AddButton({
+    Tiêu đề="TDT Hub Kaitun",
+    Mô tả="",
+    Gọi lại=hàm()
+	  loadstring(trò chơi:HttpGet("https://raw.githubusercontent.com/TRANDUYTHINH/scriptdt/refs/heads/main/7bc2bab10110ef77%20(1).lua"))()
+  kết thúc
+})
+
+Tabs.Main1:AddButton({
+    Tiêu đề="Lonely Hub Kaitun",
+    Mô tả="",
+    Gọi lại=hàm()
+	  lặp lại task.wait() cho đến khi game:IsLoaded() và game:GetService("Players") và game.Players.LocalPlayer và game.Players.LocalPlayer:FindFirstChild("PlayerGui")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Teddyseetink/Haidepzai/refs/heads/main/TEDDYHUB-FREEMIUM"))()
+  kết thúc
+})
+
+Tabs.Main1:AddButton({
+    Tiêu đề="TDT Hub Kaitun",
+    Mô tả="",
+    Gọi lại=hàm()
+	  getgenv().AutoExecute = đúng
+getgenv().SettingFarm = {
+    ["Đặt lại dịch chuyển tức thời"] = {
+        ["Đã bật"] = sai,
+        ["Trì hoãn thiết lập lại"] = 3,
+        ["Vật phẩm không đặt lại"] = {
+            ["Trái cây"] = {
+                ["Đã bật"] = đúng,
+                ["Tất cả trái cây"] = đúng,
+                ["Chọn trái cây"] = {
+                    ["Đã bật"] = sai,
+                    ["Trái cây"] = {}
+                }
+            }
+        }
+    },
+    ["Màn hình trắng"] = sai,
+    ["Khóa Fps"] = {
+        ["Đã bật"] = đúng,
+        ["FPS"] = 360
+    },
+    ["Lấy vật phẩm"] = {
+        ["Saber"] = đúng,
+        ["Godhuman"] = đúng,
+        ["Skull Guitar"] = đúng,
+        ["Gương Fractal"] = đúng,
+        ["Kiếm Katana đôi bị nguyền rủa"] = đúng,
+        ["Nâng cấp chủng tộc V2-V3"] = đúng,
+        ["Tự động kéo cần gạt"] = đúng,
+        ["Mỏ neo cá mập"] = đúng,
+    },
+    ["Nhận vật phẩm hiếm"] = {
+        ["Rengoku"] = sai,
+        ["Rồng Trident"] = sai,
+        ["Pole (Lớp 1)"] = sai,
+        ["Lưỡi kiếm trọng lực"] = sai
+    },
+    ["Mảnh vỡ trang trại"] = {
+        ["Đã bật"] = sai,
+        ["Mảnh"] = 50000
+    },
+    ["Trò chuyện"] = {
+        ["Đã bật"] = đúng,
+        ["Văn bản"] = "",
+        ["Trì hoãn"] = "150"
+    },
+    ["Tự động triệu hồi Rip Indra"] = đúng,
+    ["Chọn Hop"] = {
+        ["Chuyển máy chủ nếu có người chơi ở gần"] = false,
+        ["Nhảy tìm Rip Indra Lấy mũ Valkyrie hoặc lấy Tushita"] = đúng,
+        ["Hop Tìm Vua Bột Lấy Gương Fractal"] = sai,
+        ["Hop Find Raids Castle [CDK]"] = đúng,
+        ["Hop Find Cake Queen [CDK]"] = đúng,
+        ["Hop Find Soul Reaper [CDK]"] = đúng,
+        ["Nhảy tìm Râu Đen [SG]"] = đúng,
+        ["Nhảy tìm Mirage [Kéo cần gạt]"] = sai
+    },
+    ["Nông trại thành thạo"] = {
+        ["Cận chiến"] = sai,
+        ["Kiếm"] = sai
+    },
+    ["Mua Haki"] = {
+        ["Cải tiến"] = sai,
+        ["Skyjump"] = đúng,
+        ["Bước Flash"] = đúng,
+        ["Quan sát"] = đúng
+    }
+}
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LongHip12/LonelyHub/refs/heads/main/LonelyHub-KaitunBF.lua"))()
+  kết thúc
+})
+
+Tabs.Main1:AddButton({
+    Tiêu đề="Masterhub",
+    Mô tả="",
+    Gọi lại=hàm()
+	  loadstring(trò chơi:HttpGet("https://raw.githubusercontent.com/obfmoonsec/Masterhub/refs/heads/main/obf"))()
+  kết thúc
+})
+
+Tabs.Main1:AddButton({
+    Tiêu đề="Hiru Hub",
+    Mô tả="",
+    Gọi lại=hàm()
+	  getgenv().Cài đặt = {
+    JoinTeam = đúng,
+    Đội = "Thủy quân lục chiến"
+}
+loadstring(trò chơi:HttpGet("https://raw.githubusercontent.com/kiddohiru/Source/main/BloxFruits.lua"))()
+  kết thúc
+})
+
+Tabs.Main1:AddButton({
+    Tiêu đề="Phần thưởng tự động Zero X Hub",
+    Mô tả="",
+    Gọi lại=hàm()
+	  lặp lại task.wait() cho đến khi game:IsLoaded() và game.Players.LocalPlayer
+getgenv().Team = "Cướp biển"
+getgenv().Mode = "Tự động thưởng"
+getgenv().Config = {
+    ["Sức khỏe an toàn"] = {50, 70}, -- {chạy sức khỏe, giết sức khỏe}
+    ["Chạy Y tùy chỉnh"] = {
+        Đã bật = đúng,
+        ["Chạy Y"] = 5000
+    },
+    ["Phương pháp săn"] = {
+        ["Sử dụng Di chuyển Dự đoán"] = sai,
+        ["Đánh và chạy"] = sai,
+        ["Aimbot"] = đúng,
+        ["ESP Player"] = đúng,
+        ["Bỏ qua trình phát"] = {"nhinemtheothangkhac2"},
+        ["Thời gian tấn công tối đa"] = 60,
+        ["Khóa tiền thưởng"] = {
+            ["Đã bật"] = sai,
+            ["Tiền thưởng"] = {0, 30000000}
+        }
+    },
+    ["Thống kê"] = {
+        ["Kích hoạt"] = sai,
+        ["Đặt lại số liệu thống kê"] = sai,
+        ["Điểm"] = {
+            ["Điểm cho mỗi lần nâng"] = không,
+            ["Cận chiến"] = không có,
+            ["Phòng thủ"] = không có,
+            ["Kiếm"] = không có,
+            ["Súng"] = không,
+            ["Trái ác quỷ"] = không có
+        }
+    },
+    ["Cửa hàng"] = {
+        ["Trái cây ngẫu nhiên"] = sai,
+        ["Lưu trữ trái cây"] = đúng,
+        ["Zoro Sword"] = sai
+    },
+    ["Chủ đề"] = {
+        Tên = "Cơ bản",
+        UIUrl = "", -- rbxassetid://yourid hoặc link ảnh (github, imgur)
+        Tùy chỉnh = {
+            ["Kích hoạt"] = sai,
+            ["title_color"] = Color3.fromRGB(255, 221, 252),
+            ["titleback_color"] = Color3.fromRGB(169, 20, 255),
+            ["list_color"] = Color3.fromRGB(255, 221, 252),
+            ["liststroke_color"] = Color3.fromRGB(151, 123, 207),
+            ["button_color"] = Color3.fromRGB(255, 221, 252),
+            ["title_font"] = Enum.Font.FredokaOne,
+            ["text_font"] = Enum.Font.Gotham,
+            ["title_size"] = 40,
+            ["text_size"] = 24
+        }
+    },
+    ["Cài đặt"] = {
+        ["Thế giới"] = 3,
+        ["Xóa tệp đã lưu"] = false,
+        ["Màn hình trắng"] = sai,
+        ["Trì hoãn nhanh"] = 0,5,
+        ["Tốc độ giữa"] = 350,
+        ["Bỏ qua TP"] = đúng,
+        ["Tăng cường FPS"] = sai,
+        ["Url"] = "", -- có thể chỉnh sửa thành {url, true} nếu muốn gửi webhook
+        ["Chọn khu vực"] = {
+            ["Đã bật"] = đúng,
+            ["Khu vực"] = {"Singapore"} -- Hoa Kỳ, Hà Lan, Đức, Ấn Độ, Úc
+        }
+    },
+    ["Bỏ qua"] = {
+        ["Tránh V4"] = sai,
+        ["Trái cây"] = {
+            ["Đã bật"] = đúng,
+            ["Tránh trái cây"] = {
+                "Cổng thông tin-Cổng thông tin",
+                "Kitsune-Kitsune"
+            }
+        }
+    },
+    ["Spam toàn bộ kỹ năng trên V4"] = {
+        Đã bật = đúng,
+        ["Vũ khí"] = {"Cận chiến", "Kiếm", "Súng", "Trái cây Blox"}
+    },
+    ["Các mục"] = {
+        ["Cận chiến"] = {
+            Bật = đúng,
+            Độ trễ = 0,4,
+            Kỹ năng = {
+                Z = {Kích hoạt = đúng, Thời gian giữ = 0,3},
+                X = {Kích hoạt = đúng, Thời gian giữ = 0,2},
+                C = {Kích hoạt = đúng, Thời gian giữ = 0,5}
+            }
+        },
+        ["Kiếm"] = {
+            Bật = đúng,
+            Độ trễ = 0,5,
+            Kỹ năng = {
+                Z = {Kích hoạt = đúng, Thời gian giữ = 1},
+                X = {Kích hoạt = đúng, Giữ thời gian = 0}
+            }
+        },
+        ["Súng"] = {
+            Bật = đúng,
+            Độ trễ = 0,3,
+            Kỹ năng = {
+                Z = {Kích hoạt = đúng, Thời gian giữ = 0,1},
+                X = {Kích hoạt = đúng, Thời gian giữ = 0,1}
+            }
+        },
+        ["Trái cây Blox"] = {
+            Bật = đúng,
+            Độ trễ = 0,4,
+            Kỹ năng = {
+                Z = {Kích hoạt = đúng, Thời gian giữ = 0,1},
+                X = {Kích hoạt = đúng, Thời gian giữ = 0,1},
+                C = {Kích hoạt = đúng, Thời gian giữ = 0,15},
+                V = {Kích hoạt = đúng, Thời gian giữ = 0,2},
+                F = {Kích hoạt = đúng, Thời gian giữ = 0,1}
+            }
+        }
+    }
+}
+loadstring(trò chơi:HttpGet("https://api.luarmor.net/files/v3/loaders/ca16cb42816b395e079fa7a114352ba9.lua"))()
+  kết thúc
+})
+
+Tabs.Main1:AddButton({
+    Title="ko bt tên",
+    Mô tả="",
+    Gọi lại=hàm()
+	  getgenv().Team = "Cướp biển"
+loadstring(trò chơi:HttpGet("https://raw.githubusercontent.com/RealMatsune/Rolls-Rocye/refs/heads/main/Loading.lua"))()
+  kết thúc
+})
